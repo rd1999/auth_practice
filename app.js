@@ -12,6 +12,9 @@ app.use(express.json());
 // importing user context
 const User = require("./model/user");
 
+app.get("/", (req, res) => {
+  res.send("<h1>Hello</h1>")
+})
 
 app.post("/welcome", auth, (req, res) => {
     res.status(200).send("Welcome to FreeCodeCamp 🙌");
